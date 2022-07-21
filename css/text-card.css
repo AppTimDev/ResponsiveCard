@@ -1,0 +1,86 @@
+/*=============== BASE Tag ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--ff-body);
+    background-color: var(--color-body);
+    color: var(--color-text);
+}
+/*=============== COMMON CLASSES ===============*/
+.grid {
+    display: grid;
+}
+
+.section {
+    padding: 1rem;
+}
+
+/*=============== Message ===============*/
+.message__container {
+    row-gap: 1.5rem;
+}
+.message__card {
+    position: relative;    
+    box-sizing: border-box;
+    padding: 2rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    overflow-y: hidden;
+    transition: .3s; /*hover shadow*/
+}
+.message__card:hover {
+    box-shadow: 0 0 32px var(--color-shadow-blue);
+}
+.message__copy__btn{
+    position: absolute;
+    background-color: hsl(120, 50%, 61%);
+    right: 0;
+    top: 1.5rem;
+    padding: 1rem .25rem;
+    color: #fff;
+    cursor: pointer;
+}
+.message__title {
+    text-align: center;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    color: var(--color-message-title);    
+    margin-bottom: var(--mg-0-5);
+}
+
+.message__text {
+    text-align: left;
+    font-size: var(--fs-normal);
+    color: var(--color-message-text);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+}
+
+/* Small screen devices (596px and above) */
+@media screen and (min-width: 596px) {
+    .message__container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+/* Medium screen devices */
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+    .message__container {
+        grid-template-columns: repeat(3, 300px);
+    }
+}
+
+/* Large screen devices */
+@media screen and (min-width: 1024px) {
+}
